@@ -5,6 +5,7 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         'lua_ls',
+        'vtsls',
       },
     },
     dependencies = {
@@ -15,7 +16,7 @@ return {
       {
         'neovim/nvim-lspconfig',
         config = function()
-          vim.lsp.set_log_level 'DEBUG'
+          -- vim.lsp.set_log_level 'DEBUG'
 
           local capabilities = require('blink.cmp').get_lsp_capabilities()
           vim.lsp.config('*', {
@@ -76,6 +77,7 @@ return {
       ensure_installed = {
         'prettier', -- prettier formatter
         'stylua', -- lua formatter
+        'eslint_d',
       },
     },
     dependencies = {
